@@ -62,10 +62,10 @@ do
         git submodule update --init
         cd $OUTDIR
 
-        # Define PICO_SDK_PATH in ~/.bashrc
+        # Define PICO_SDK_PATH in .bashrc
         VARNAME="PICO_${REPO^^}_PATH"
-        echo "Adding $VARNAME to ~/.bashrc"
-        echo "export $VARNAME=$DEST" >> ~/.bashrc
+        echo "Adding $VARNAME to .bashrc"
+        echo "export $VARNAME=$DEST" >> .bashrc
         export ${VARNAME}=$DEST
     fi
 done
@@ -73,7 +73,7 @@ done
 cd $OUTDIR
 
 # Pick up new variables we just defined
-source ~/.bashrc
+source .bashrc
 
 # Build blink and hello world for pico and pico2
 cd pico-examples
