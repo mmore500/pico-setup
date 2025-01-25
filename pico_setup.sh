@@ -33,8 +33,8 @@ else
 fi
 
 echo "Installing Dependencies"
-sudo apt update
-sudo apt install -y $DEPS
+sudo apt update || :
+sudo apt install -y $DEPS || :
 
 echo "Creating $OUTDIR"
 # Create pico directory to put everything in
